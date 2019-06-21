@@ -23,13 +23,13 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
-	constructor() {
-		super()
-		this.state = {
-			robots: [],
+	// constructor() {
+	// 	super()
+	// 	this.state = {
+	// 		robots: [],
 			// searchfield: ''
-		}
-	}
+	// 	}
+	// }
 
 	componentDidMount() {
 		this.props.onRequestRobots();
