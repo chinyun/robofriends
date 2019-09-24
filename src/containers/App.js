@@ -50,17 +50,17 @@ class App extends Component {
 	render() {
 		// const { robots } = this.state;
 		const { searchField, onSearchChange, robots, isPending } = this.props;
-		const filteredRobots = robots.filter(robot=> {
+		const filteredRobots = robots.filter(robot => {
 			return robot.name.toLowerCase().includes(searchField.toLowerCase());
 		})
 		return (
-			<div className = 'tc'>
-				<h1 className = 'f1'>RoboFriends</h1>
-				<SearchBox searchChange = { onSearchChange }/>
+			<div className='tc'>
+				<h1 className='f1'>RoboFriends</h1>
+				<SearchBox searchChange={ onSearchChange }/>
 				<Scroll>
 				{ isPending ? <h1> Loading </h1> :
 					<ErrorBoundary>
-						<CardList robots = { filteredRobots }/>
+						<CardList robots={ filteredRobots }/>
 					</ErrorBoundary>
 				}	
 				</Scroll>
